@@ -1,0 +1,16 @@
+base_packages:
+  - tcl 
+  - tcl-devel
+  - gettext
+  - fail2ban
+  - openssl
+  - python3-pip
+  - make
+  - wget
+  - unzip
+  - logrotate
+  - socat
+  - curl    
+  - vim
+  - git
+  - acl
