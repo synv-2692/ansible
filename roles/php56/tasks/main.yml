@@ -1,0 +1,20 @@
+- name: install the dependencies
+  yum:
+    name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+- command: wget https://repo.ius.io/ius-release-el7.rpm
+  become: true
+- command: rpm -Uvh ius-release*.rpm
+  become: true
+- command: yum update -y
+  become: true
+- name: install php5.6 packages 
+  yum: 
+    name:  php56u, php56u-fpm
+    enablerepo: ius-archive
+    state: present
+  become: true
+- name: show version
+  shell: php --version |head -n 1
+  register: versions
+- debug:
+    var: versions.stdout
