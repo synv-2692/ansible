@@ -1,0 +1,3 @@
+php_packages:
+ - php56u 
+ - php56u-fpm

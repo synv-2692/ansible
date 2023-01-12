@@ -9,7 +9,7 @@
   become: true
 - name: install php5.6 packages 
   yum: 
-    name:  php56u, php56u-fpm
+    name: "{{ php_packages }}"
     enablerepo: ius-archive
     state: present
   become: true
